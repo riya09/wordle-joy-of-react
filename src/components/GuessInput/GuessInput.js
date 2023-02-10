@@ -20,3 +20,5 @@ function GuessInput() {
     </form>
    );
 }
+
+export default GuessInput;
