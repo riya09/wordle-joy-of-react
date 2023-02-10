@@ -6,8 +6,8 @@ function Guess({ word }) {
     <p className="guess">
       {range(5).map((cell) => {
         return (
-          <span key={cell} className="cell">
-            {word ? word[cell] : ""}
+          <span key={cell} className={word ? `${word[cell].status} cell` : 'cell'}>
+            {word ? word[cell].letter : ""}
           </span>
         );
       })}
