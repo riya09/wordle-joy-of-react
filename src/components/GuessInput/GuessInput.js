@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-function GuessInput() {
+function GuessInput({getWord}) {
   const [text, setText] = useState('')
   return ( 
     <form className="guess-input-wrapper" onSubmit={(event) => {
       event.preventDefault()
-      console.log(text)
+      getWord(text)
       setText('')
     }}>
       <label htmlFor="guess-input">Enter guess:</label>
