@@ -6,7 +6,7 @@ function GameStatus({status, answer, numberOfGuesses}) {
       return (
         <p>
           <strong>Congratulations!</strong> Got it in
-          <strong>{numberOfGuesses} guesses</strong>.
+          <strong> {numberOfGuesses} guesses</strong>.
         </p>
       )
     } else {
@@ -15,11 +15,11 @@ function GameStatus({status, answer, numberOfGuesses}) {
       )
     }
   }
-  
+
   return (
     <>
       <div className={status === 'win' ? 'happy banner' : 'sad banner'}>
-        {banner}
+        {banner()}
       </div>
     </>
   );
