@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function GuessInput({getWord}) {
+function GuessInput({getWord, disabled}) {
   const [text, setText] = useState('')
   return ( 
     <form className="guess-input-wrapper" onSubmit={(event) => {
@@ -15,6 +15,7 @@ function GuessInput({getWord}) {
         value={text}
         minLength={5}
         maxLength={5}
+        disabled={disabled}
         onChange={(event) => setText((event.target.value).toUpperCase())}
       />
     </form>
